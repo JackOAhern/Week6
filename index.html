@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+  </head>
+
+  <body>
+    <h1>Album Color Picker</h1>
+
+    <!-- I could only get the buttons to change the image sources by using
+        onclick in button line. I tried for so long to do it the way
+        we did in class, but for some reason I could never get it to work.-->
+
+    <section id="buttons">
+      <section id="button1">
+        <button type="button" onclick="imgchangered()" name="button1">RED</button>
+      </section>
+
+      <section id="button2">
+        <button type="button" onclick="imgchangeblue()" name="button2">BLUE</button>
+      </section>
+
+      <section id="button3">
+        <button type="button" onclick="imgchangeyellow()" name="button3">YELLOW</button>
+      </section>
+    </section>
+
+    <section id="images">
+      <img id="mainimage" src="albumcolorcollage.jpg" alt="albumcoversimg">
+    </section>
+
+
+  <script>
+
+    document.getElementById("button1").addEventListener("click"), imgchangered();
+    document.getElementById("button2").addEventListener("click"), imgchangeblue();
+    document.getElementById("button3").addEventListener("click"), imgchangeyellow();
+
+    function imgchangered(){
+      document.getElementById("mainimage").src="redalbums.jpg";
+    }
+
+    function imgchangeblue(){
+      document.getElementById("mainimage").src="bluealbums.jpg";
+    }
+
+    function imgchangeyellow(){
+      document.getElementById("mainimage").src="yellowalbums.jpg";
+    }
+
+  </script>
+
+  </body>
+
+
+</html>
